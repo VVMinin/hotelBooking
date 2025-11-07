@@ -86,10 +86,20 @@ const Admin: React.FC = () => {
   };
 
   const handleAddRoom = () => {
+    setError('');
+    if (!newRoomName.trim() || !newRoomPrice.trim()) {
+      setError("Название и цена не могут быть пустыми.");
+      return;
+    }
+    const price = parseInt(newRoomPrice);
+    if (isNaN(price) || price < 0) {
+      setError("Цена должна быть положительным числом.");
+      return;
+    }
     addRoom({
       id: Date.now().toString(),
       name: newRoomName,
-      price: parseInt(newRoomPrice),
+      price: price,
       images: newRoomImages,
       roomCount: parseInt(newRoomCount),
       description: newRoomDescription
@@ -99,14 +109,26 @@ const Admin: React.FC = () => {
   };
 
   const handleStartEditRoom = (room: any) => {
+    setError('');
     const images = room.images || (room.image ? [room.image] : []);
     setEditingRoom({ ...room, images, roomCount: room.roomCount || 1, description: room.description || '' });
   };
 
   const handleUpdateRoom = () => {
     if (!editingRoom) return;
-    const { image, ...roomToUpdate } = editingRoom;
-    updateRoom(roomToUpdate);
+    setError('');
+
+    if (!editingRoom.name.trim() || editingRoom.price.toString().trim() === '') {
+      setError("Название и цена не могут быть пустыми.");
+      return;
+    }
+    const price = Number(editingRoom.price);
+    if (isNaN(price) || price < 0) {
+      setError("Цена должна быть корректным положительным числом.");
+      return;
+    }
+
+    updateRoom(editingRoom);
     setEditingRoom(null);
     reloadData();
   };
