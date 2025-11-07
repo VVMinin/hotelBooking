@@ -2,7 +2,7 @@
   "name": "hotel-reserved",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME",
+  "homepage": "https://VVMinin.github.io/hotelProject",
   "type": "module",
   "scripts": {
     "dev": "vite",
