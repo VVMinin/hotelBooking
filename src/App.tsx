@@ -1,8 +1,8 @@
 import {useEffect,useState } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Home from './pages/Home';
-import Rooms from './pages/Rooms';
 import Room from './pages/Room';
+import Rooms from './pages/Rooms';
 import Bookings from './pages/Bookings';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
