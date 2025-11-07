@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router } from 'react-router-dom'; // <--- Изменено здесь
+import { HashRouter as Router } from 'react-router-dom'; // <--- ИЗМЕНЕНО ЗДЕСЬ
 import App from './App';
 
 const root = ReactDOM.createRoot(
