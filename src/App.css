@@ -1,0 +1,116 @@
+:root {
+  --background-color-light: #f0f4f8;
+  --text-color-light: #334e68;
+  --primary-color-light: #84a9c0;
+  --secondary-color-light: #c1d4e0;
+  --accent-color-light: #e0b0d5;
+  --border-color-light: #d3e0ea;
+  --card-background-light: #ffffff;
+  --button-hover-light: #7092a8;
+}
+
+.dark-theme {
+  --background-color-light: #2c3e50;
+  --text-color-light: #ecf0f1;
+  --primary-color-light: #34495e;
+  --secondary-color-light: #4a6572;
+  --accent-color-light: #9b59b6;
+  --border-color-light: #3a536b;
+  --card-background-light: #34495e;
+  --button-hover-light: #2a3b4c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color-light);
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color-light);
+}
+
+nav span {
+  margin-left: auto;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+button {
+  background-color: var(--primary-color-light);
+  color: var(--text-color-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-light);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"] {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid var(--border-color-light);
+  border-radius: 4px;
+  background-color: var(--card-background-light);
+  color: var(--text-color-light);
+  width: calc(100% - 22px);
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color-light);
+  margin-left: 20px;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-color-light);
+}
